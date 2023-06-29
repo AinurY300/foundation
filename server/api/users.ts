@@ -1,11 +1,10 @@
-import { PrismaClient } from '@prisma/client'
+import { prisma } from "../../prisma/db"
 
 export default defineEventHandler(async event => {
 
-  // const prisma = new PrismaClient()
-  // const users = await prisma.user.findMany()
+  const users = await prisma.user.findMany()
 
   return {
-    users: 'em users'
+    users: users
   }
 })
