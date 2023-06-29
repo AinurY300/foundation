@@ -1,4 +1,6 @@
 import { resolve } from "node:path"
+import { PrismaAdapter } from "@auth/prisma-adapter"
+import { prisma } from "./prisma/db"
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -12,6 +14,7 @@ export default defineNuxtConfig({
   },
   
   runtimeConfig: {
+    adapter: PrismaAdapter(prisma),
     authJs: {
       secret: process.env.NUXT_NEXTAUTH_SECRET // You can generate one with `openssl rand -base64 32`
     },
@@ -19,10 +22,6 @@ export default defineNuxtConfig({
       clientId: 'bb66051bbcda4523ba405d24faab5f04',
       clientSecret: 'e05f2bb90fcd4515957fe6ee12c24c3c'
     },
-    // github: {
-    //   clientId: process.env.NUXT_GITHUB_CLIENT_ID,
-    //   clientSecret: process.env.NUXT_GITHUB_CLIENT_SECRET
-    // },
     public: {
       authJs: {
         baseUrl: process.env.NUXT_NEXTAUTH_URL, // The base URL is used for the Origin Check in prod only
