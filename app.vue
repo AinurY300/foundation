@@ -1,10 +1,13 @@
 <script setup lang="ts">
 const users = await $fetch('/api/users')
+const { signIn } = useAuth()
 </script>
 
 <template>
   <v-app>
-    <v-app-bar/>
+    <v-app-bar>
+      <v-btn @click="signIn">Войти</v-btn>
+    </v-app-bar>
     <v-main>
       <v-container>
         Привет, мир!
