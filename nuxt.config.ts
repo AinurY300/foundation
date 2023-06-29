@@ -15,6 +15,10 @@ export default defineNuxtConfig({
     authJs: {
       secret: process.env.NUXT_NEXTAUTH_SECRET // You can generate one with `openssl rand -base64 32`
     },
+    yandex: {
+      clientId: 'bb66051bbcda4523ba405d24faab5f04',
+      clientSecret: 'e05f2bb90fcd4515957fe6ee12c24c3c'
+    },
     // github: {
     //   clientId: process.env.NUXT_GITHUB_CLIENT_ID,
     //   clientSecret: process.env.NUXT_GITHUB_CLIENT_SECRET
