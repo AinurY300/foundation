@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const users = await $fetch('/api/users')
-const { signIn, getSession, signOut } = useAuth()
-const session = await getSession()
+const { signIn, signOut } = useAuth()
 </script>
 
 <template>
@@ -11,8 +10,6 @@ const session = await getSession()
     </v-app-bar>
     <v-main>
       <v-container>
-        Пользователь: {{ session }}
-        <v-btn v-if="session.user" @click="signOut">Выйти</v-btn>
       </v-container>
       <v-container>
         Привет, мир!
