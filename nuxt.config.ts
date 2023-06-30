@@ -4,7 +4,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    'nuxt-purgecss',
     '@sidebase/nuxt-auth',
     
     async (options, nuxt) => {
@@ -13,10 +12,6 @@ export default defineNuxtConfig({
       });
     }
   ],
-
-  purgecss: {
-    content: ['modules/purgecss/static-generated-html/**/*.html'],
-  },
   
   auth: {
     baseURL: process.env.NEXTAUTH_URL,
