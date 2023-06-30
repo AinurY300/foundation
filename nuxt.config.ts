@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   ],
   
   auth: {
-    baseURL: process.env.NEXTAUTH_URL,
+    baseURL: process.env.VERCEL_URL,
   },
   
   build: {
