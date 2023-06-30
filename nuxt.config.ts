@@ -1,14 +1,10 @@
-// import { resolve } from "node:path"
-// import { PrismaAdapter } from "@auth/prisma-adapter"
-// import { prisma } from "./prisma/db"
-
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: ['@sidebase/nuxt-auth'],
   
   auth: {
-    baseURL: process.env.NEXTAUTH_URL
+    baseURL: process.env.NEXTAUTH_URL,
   },
   
   build: {
