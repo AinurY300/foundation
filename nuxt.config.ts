@@ -1,7 +1,22 @@
+import vuetify from 'vite-plugin-vuetify'
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ['@sidebase/nuxt-auth'],
+  modules: [
+    'nuxt-purgecss',
+    '@sidebase/nuxt-auth',
+    
+    async (options, nuxt) => {
+        nuxt.hooks.hook('vite:extendConfig', (config) => {
+          config?.plugins?.push(vuetify());
+      });
+    }
+  ],
+
+  purgecss: {
+    content: ['modules/purgecss/static-generated-html/**/*.html'],
+  },
   
   auth: {
     baseURL: process.env.NEXTAUTH_URL,
