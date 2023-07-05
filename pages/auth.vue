@@ -14,16 +14,16 @@ const { signIn } = useAuth()
           <v-card>
             <v-card-actions>
               <v-btn size="large" border class="flex-fill" @click="signIn('github')">
-                <v-img width="22" height="22" src="./assets/auth/github2.svg"/>
+                <v-img width="22" height="22" src="https://oflmdeykteiflhehnhfe.supabase.co/storage/v1/object/public/svg/github.svg"/>
               </v-btn>
               <v-btn size="large" border class="flex-fill" @click="signIn('google')">
-                <v-img width="22" height="22" src="./assets/auth/google.svg"/>
+                <v-img width="22" height="22" src="https://oflmdeykteiflhehnhfe.supabase.co/storage/v1/object/public/svg/google.svg"/>
               </v-btn>
               <v-btn size="large" border class="flex-fill" @click="signIn('yandex')">
-                <v-img width="22" height="22" src="./assets/auth/yandex.svg"/>
+                <v-img width="22" height="22" src="https://oflmdeykteiflhehnhfe.supabase.co/storage/v1/object/public/svg/vk.svg"/>
               </v-btn>
               <v-btn size="large" border class="flex-fill" @click="signIn('vk')">
-                <v-img width="22" height="22" src="./assets/auth/vk3.svg"/>
+                <v-img width="22" height="22" src="https://oflmdeykteiflhehnhfe.supabase.co/storage/v1/object/public/svg/yandex.svg"/>
               </v-btn>
             </v-card-actions>
           </v-card>
