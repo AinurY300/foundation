@@ -6,7 +6,7 @@ import * as directives from 'vuetify/directives'
 export default defineNuxtPlugin(nuxtApp => {
   const vuetify = createVuetify({
     components,
-    directives
+    directives,
 
     ssr: true,
     theme: {
