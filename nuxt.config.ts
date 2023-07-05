@@ -7,11 +7,11 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@sidebase/nuxt-auth',
     
-    async (options, nuxt) => {
-        nuxt.hooks.hook('vite:extendConfig', (config) => {
-          config?.plugins?.push(vuetify());
-      });
-    }
+    // async (options, nuxt) => {
+    //     nuxt.hooks.hook('vite:extendConfig', (config) => {
+    //       config?.plugins?.push(vuetify());
+    //   });
+    // }
   ],
 
   i18n: {
