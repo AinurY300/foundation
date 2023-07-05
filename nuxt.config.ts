@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
+    '@nuxtjs/i18n',
     '@sidebase/nuxt-auth',
     
     async (options, nuxt) => {
@@ -12,6 +13,22 @@ export default defineNuxtConfig({
       });
     }
   ],
+
+  i18n: {
+    baseUrl: process.env.BASE_URL,
+    locales: [
+      { code: 'ru', iso: 'ru-RU', file: 'ru-RU.ts' },
+      { code: 'en', iso: 'en-US', file: 'en-US.ts' },
+    ],
+    lazy: true,
+    langDir: 'lang',
+    defaultLocale: 'ru',
+    strategy: 'prefix_except_default',
+    experimental: {
+      jsTsFormatResource: true
+    },
+    vueI18n: './i18n.config.ts',
+  },
   
   auth: {
     baseURL: process.env.BASE_URL,
@@ -32,3 +49,4 @@ export default defineNuxtConfig({
     '@mdi/font/css/materialdesignicons.min.css',
   ],
 })
+

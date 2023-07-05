@@ -6,6 +6,29 @@ import { createVuetify } from 'vuetify'
 export default defineNuxtPlugin(nuxtApp => {
   const vuetify = createVuetify({
     ssr: true,
+    theme: {
+      // defaultTheme: 'dark',
+      themes: {
+        'dark': {
+          colors: {
+            primary: '#000000', // '#0071e3'
+          }
+        }
+      }
+    },
+    defaults: {
+      VAppBar: {
+        flat: true,
+        class: ['border-b']
+      },
+      VBtn: {
+        class: ['text-body-2', 'font-weight-medium']
+      },
+      VCard: {
+        flat: true,
+        border: true,
+      }
+    },
     // components,
     // directives,
   })

@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/i18n": "8.0.0-beta.12",
     "@sidebase/nuxt-auth": "^0.6.0-beta.3",
     "@types/node": "^18",
     "nuxt": "^3.6.1",
